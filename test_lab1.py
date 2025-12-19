@@ -5,19 +5,16 @@ from botocore.exceptions import ClientError
 
 @pytest.fixture(scope="session")
 def iam_client():
-    print("testing iam:", boto3.client("iam"))
     return boto3.client("iam")
 
 
 @pytest.fixture(scope="session")
 def cfn_client():
-    print("testing cloudformation:", boto3.client("cloudformation"))
     return boto3.client("cloudformation")
 
 
 @pytest.fixture(scope="session")
 def s3_client():
-    print("testing s3:", boto3.client("s3"))
     return boto3.client("s3")
 
 
@@ -92,12 +89,3 @@ def test_there_is_at_least_one_ec2_instance(ec2_client):
     assert (
         instance_count > 0
     ), "Expected at least one EC2 instance in this region, but none were found."
-
-def main():
-    iam_client()
-    cfn_client()
-    s3_client()
-    ec2_client()
-
-if __name__ == "__main__":
-    main()
