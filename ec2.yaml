@@ -21,7 +21,6 @@ Resources:
     Properties:
       InstanceType: t3.micro
       ImageId: ami-00e428798e77d38d9
-      Region: us-east-2
       SecurityGroupIds:
         - !Ref InstanceSecurityGroup
       Tags:
