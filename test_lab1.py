@@ -92,3 +92,12 @@ def test_there_is_at_least_one_ec2_instance(ec2_client):
     assert (
         instance_count > 0
     ), "Expected at least one EC2 instance in this region, but none were found."
+
+def main():
+    iam_client()
+    cfn_client()
+    s3_client()
+    ec2_client()
+
+if __name__ == "__main__":
+    main()
