@@ -5,16 +5,19 @@ from botocore.exceptions import ClientError
 
 @pytest.fixture(scope="session")
 def iam_client():
+    print("testing iam:", boto3.client("iam"))
     return boto3.client("iam")
 
 
 @pytest.fixture(scope="session")
 def cfn_client():
+        print("testing cloudformation:", boto3.client("cloudformation"))
     return boto3.client("cloudformation")
 
 
 @pytest.fixture(scope="session")
 def s3_client():
+    print("testing s3:", boto3.client("s3"))
     return boto3.client("s3")
 
 
