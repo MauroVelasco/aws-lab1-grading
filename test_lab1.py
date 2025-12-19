@@ -11,7 +11,7 @@ def iam_client():
 
 @pytest.fixture(scope="session")
 def cfn_client():
-        print("testing cloudformation:", boto3.client("cloudformation"))
+    print("testing cloudformation:", boto3.client("cloudformation"))
     return boto3.client("cloudformation")
 
 
