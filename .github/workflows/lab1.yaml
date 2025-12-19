@@ -34,7 +34,10 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file s3.yaml \
-            --stack-name mv-coderoad-stack 
+            --stack-name mv-coderoad-stack-s3
+          aws cloudformation deploy \
+            --template-file ec2.yaml \
+            --stack-name mv-coderoad-stack-ec2
       - name: Run test_lab1
         run: pytest test_lab1.py
   
