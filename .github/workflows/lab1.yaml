@@ -35,4 +35,5 @@ jobs:
             --template-file s3.yaml \
             --stack-name mv-coderoad-stack 
       - name: Run pytest
-        run: pytest
+        run: python test_lab1.py
+  
