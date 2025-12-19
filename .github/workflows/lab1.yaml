@@ -34,12 +34,12 @@ jobs:
         run: |
           aws cloudformation deploy \
             --template-file s3.yaml \
-            --stack-name mv-coderoad-stack-s3-d
+            --stack-name mv-coderoad-stack-s3-e
       - name: Deploy CloudFormation stack EC2
         run: |
           aws cloudformation deploy \
             --template-file ec2.yaml \
-            --stack-name mv-coderoad-stack-ec2-d \
+            --stack-name mv-coderoad-stack-ec2-e \
             --capabilities CAPABILITY_NAMED_IAM \
             --no-fail-on-empty-changeset
       - name: Run test_lab1
